@@ -227,8 +227,10 @@ public class SplashScreen extends CordovaPlugin {
                         fadeOut.setInterpolator(new DecelerateInterpolator());
                         fadeOut.setDuration(fadeSplashScreenDuration);
 
-                        splashImageView.setAnimation(fadeOut);
-                        splashImageView.startAnimation(fadeOut);
+                       if(splashImageView!=null){
+				splashImageView.setAnimation(fadeOut);
+				splashImageView.startAnimation(fadeOut);
+			  }
 
                         fadeOut.setAnimationListener(new Animation.AnimationListener() {
                             @Override
